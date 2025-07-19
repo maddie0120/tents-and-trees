@@ -36,7 +36,7 @@ During the solving process, you may also see `_` representing an unassigned cell
 
 ### ✅ 1. Check SWI-Prolog Installation
 
-Make sure you have **SWI-Prolog** installed.
+Make sure you have **SWI-Prolog** installed. The installation typically includes both the command line interface and the desktop application.
 
 #### On Linux (including WSL):
 
@@ -46,11 +46,18 @@ To verify, open your terminal and run:
 swipl --version
 ```
 
+If SWI-Prolog is installed, this will display the version information (e.g., `SWI-Prolog version 8.4.2 for x86_64-linux`).
+
 If not installed, you can run:
 
-```bash
-sudo apt install swi-prolog-core
-```
+- For **both desktop application and command line**:
+  ```bash
+  sudo apt install swi-prolog
+  ```
+- For **command line only**:
+  ```bash
+  sudo apt install swi-prolog-core
+  ```
 
 #### On macOS:
 
@@ -59,6 +66,8 @@ Check installation with:
 ```bash
 swipl --version
 ```
+
+If SWI-Prolog is installed, this will display the version information (e.g., `SWI-Prolog version 8.4.2 for x86_64-linux`).
 
 If not installed, you can either:
 
@@ -76,9 +85,29 @@ Download the SWI-Prolog installer from the [official website](https://www.swi-pr
 swipl --version
 ```
 
+If SWI-Prolog is installed, this will display the version information (e.g., `SWI-Prolog version 8.4.2 for x86_64-linux`).
+
 ### ✅ 2. Run the Program
 
-Once SWI-Prolog is installed, you can run the program using the following steps:
+Once SWI-Prolog is installed, you have two options to run the program:
+
+#### Option A: Using SWI-Prolog Desktop Application (Recommended for Beginners)
+
+If you installed SWI-Prolog with the desktop application:
+
+1. **Open SWI-Prolog** from your applications menu or start menu
+2. **Load the program** by clicking `File` → `Consult...` and selecting `projeto.pl`
+3. **Run a puzzle** by typing in the query area:
+   ```prolog
+   ?- puzzle(6-13, P), resolve(P).
+   ```
+4. **Press Enter** to execute the query
+
+The desktop application provides a user-friendly interface with syntax highlighting and easier file management.
+
+#### Option B: Using Command Line
+
+You can also run the program using the following steps:
 
 1. **Start SWI-Prolog**:
 
@@ -92,7 +121,7 @@ Once SWI-Prolog is installed, you can run the program using the following steps:
    ?- ['projeto.pl'].
    ```
 
-   This will return `true` if the file is loaded successfully.
+   This will return `true.` if the file is loaded successfully.
 
 3. **Solve a puzzle**:
 
